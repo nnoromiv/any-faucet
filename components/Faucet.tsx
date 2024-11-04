@@ -7,19 +7,16 @@ import FormInput from './FormInput'
 import { ethersConfig, toSentenceCase } from '@/utils'
 import { Loader, MainButton } from "@/components"
 import { toast } from 'sonner'
-import { useAccount, useReadContract, useConnect } from 'wagmi'
+import { useAccount, useReadContract } from 'wagmi'
 import abi from '@/contracts/abi.json'
 import { formatEther } from 'ethers'
-import { ConnectorNotConnectedError, writeContract, WriteContractErrorType, type WriteContractReturnType } from '@wagmi/core'
+import { writeContract, WriteContractErrorType, type WriteContractReturnType } from '@wagmi/core'
 import { parseGwei } from 'viem'
 import { polygon } from 'wagmi/chains'
 
 const Faucet = () => {
     const [loader, setLoader] = useState(false)
     const { address: connectedAddress } = useAccount()
-    const { connectAsync, connectors } = useConnect({
-        config: ethersConfig,
-    })
 
     const { data: amount, isError, isLoading, error}  = useReadContract({
         address: `0x${process.env.NEXT_PUBLIC_ADDRESS!}`,
@@ -89,7 +86,7 @@ const Faucet = () => {
                 validationSchema={AddressSchema}
                 validateOnChange
             >
-                {({ errors, values, touched, dirty, isValid }) => (
+                {({ errors, touched }) => (
                     <>
                         <Form className='w-full'>
                             <FormInput
