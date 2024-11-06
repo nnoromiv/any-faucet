@@ -37,7 +37,7 @@ export default function RootLayout({
         >
           <NextUIProvider>
             <Providers>
-              <Toaster position="top-right" richColors />
+              <Toaster position="bottom-right" richColors />
               {children}
             </Providers>
           </NextUIProvider>

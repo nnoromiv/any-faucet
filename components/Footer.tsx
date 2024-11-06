@@ -9,17 +9,17 @@ const FAUCET = `0x${process.env.NEXT_PUBLIC_ADDRESS}`
 
 const Footer = () => {
     return (
-        <footer className='border-t-[2px] border-t-white mt-10 relative z-10 max-[426px]:mx-auto'>
+        <footer className='border-t-[2px] border-t-white mt-10 mb-3 relative z-10 max-[426px]:mx-auto'>
             <div className='flex justify-evenly mt-5 text-white'>
-                <Link href={'https://www.linkedin.com/in/nnorom'} 
+                <Link href={'https://www.linkedin.com/in/mushee'} 
                     target='_blank'>
                         <Icon icon={"mingcute:linkedin-line"} className='w-[50px] h-[50px] cursor-pointer relative'/>
                 </Link>
-                <Link href={'https://www.x.com/nnorom'} 
+                <Link href={'https://www.x.com/mushee_io'} 
                     target='_blank'>
                         <Icon icon={"mingcute:social-x-line"} className='w-[50px] h-[50px] cursor-pointer relative'/>
                 </Link>
-                <Link href={'https://www.t.me/verdansk'} 
+                <Link href={'https://www.t.me/verdansk4'} 
                     target='_blank'>
                         <Icon icon={"mingcute:telegram-line"} className='w-[50px] h-[50px] cursor-pointer relative'/>
                 </Link>

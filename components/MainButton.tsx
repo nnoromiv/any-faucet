@@ -23,7 +23,7 @@ const MainButton: FC<MainButtonProps> = ({ type, isIconOnly, onClick, isDisabled
             bodyStyle='!w-full !h-full !bg-black'
           />
         }
-        className={`text-black h-12 w-full dark:text-white ${isIconOnly ? 'p-0' : 'p-3'} ${isDisabled ? 'opacity-50' : 'opacity-100'} ${isLoading ? 'pointer-events-none' : 'cursor-pointer'}`}
+        className={`text-zinc-500 h-12 w-full dark:text-white ${isIconOnly ? 'p-0' : 'p-3'} ${isDisabled ? 'opacity-50' : 'opacity-100'} ${isLoading ? 'pointer-events-none' : 'cursor-pointer'}`}
         >
           {
             !isLoading && name
