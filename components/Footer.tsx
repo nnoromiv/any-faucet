@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react'
 import Link from 'next/link'
 import React from 'react'
 
-const FAUCET = `0x${process.env.NEXT_PUBLIC_ADDRESS}`
+const FAUCET = `0x${process.env.NEXT_PUBLIC_OWNER}`
 
 const Footer = () => {
     return (
@@ -30,7 +30,7 @@ const Footer = () => {
                         <h1
                             onClick={() => CopyToClipboard(FAUCET)}
                         className='underline w-fit max-[376px]:w-full self-center cursor-pointer my-2 text-[10px] bg-monadBlue px-3 py-1 rounded-full text-white dark:bg-monadPurple dark:text-black'
-                        >   {FAUCET}
+                        > OWNER - {FAUCET}
                         </h1>
                     }
                 <h4 className='text-white'> Copyright © 2024 Any Token</h4>
